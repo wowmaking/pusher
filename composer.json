@@ -1,0 +1,21 @@
+{
+    "name": "underblow/pusher",
+    "keywords": ["pusher"],
+    "description": "",
+    "homepage": "https://github.com/underblow/pusher",
+    "minimum-stability": "stable",
+    "type": "phplib",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"Wow\\": "src/"}
+    },
+    "authors": [
+        {
+            "name": "Underblow",
+            "homepage": "https://github.com/underblow"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    }
+}

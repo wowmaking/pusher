@@ -7,11 +7,11 @@ PHP library for push-notification service
 
 To install run:
 ```
-    composer require "underblow/pusher"
+    composer require "wowmaking/pusher"
 ```
 Or add this line to  _require_  section of composer.json:
 ```
-    "underblow/pusher": "dev-master"
+    "wowmaking/pusher": "dev-master"
 ```
 ## Usage
 Initial:

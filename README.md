@@ -1,3 +1,4 @@
+
 # Pusher
 
 PHP library for push-notification service
@@ -40,7 +41,7 @@ Send message:
 		    "sound"=>"default"
 		    //see other fields for "notification" parameter on https://firebase.google.com/docs/cloud-messaging/admin/send-messages
 	    ],
-	    "varibles"=>[
+	    "variables"=>[
 		    "count"=>100
 	    ],
 	    "additional_params"=>[
@@ -71,3 +72,11 @@ Send message to users:
 	    ]
     ];
     $push->sendMessages("code.message.cat",$users);
+    
+Remove tokens by user:
+    
+    $push->removeUser("user_id");
+    
+Remove token:
+    
+    $push->removeToken("EMAWf6FJzZAhEKLus23hYXbhdEA1voK7O0kx3XERUnQr85ZB6SPaChZAKwi89eWbwx2wE1ZCh99HQ5MXZAegLNQcIAhcyttmylUA1NTn0JZBwSDsoFiktZBSxAzpA9pfDcrudTZCNeZCzkZCyxOWNKE74gW20WhMJnrCleAZD");

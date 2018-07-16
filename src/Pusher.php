@@ -15,14 +15,15 @@ class Pusher
             $this->_host = $host;
     }
     
-    private function request($route, $fields){
+    private function request($route, $fields, $method = "POST"){
         $url = trim($this->_host,"/").$route;
     
         $fields = json_encode($fields);
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POST, true);
+        //curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -48,5 +49,13 @@ class Pusher
     
     public function sendMessages($code,$users){
         return $this->request("/api/push/messages",["code"=>$code, "users"=>$users]);
+    }
+    
+    public function removeToken($token){
+        return $this->request("/api/token",["token"=>$token], "DELETE");
+    }
+    
+    public function removeUser($user_id){
+        return $this->request("/api/token/user",["user_id"=>$user_id], "DELETE");
     }
 }

@@ -57,7 +57,7 @@ Send message to users:
 	    [
 		    "user_id"=>"user_id_1",
 		    "params"=>[
-			    "varibles"=>[
+			    "variables"=>[
 				    "count"=>200
 			    ]
 		    ]
@@ -65,7 +65,7 @@ Send message to users:
 	    [
 		    "user_id"=>"user_id_2",
 		    "params"=>[
-			    "varibles"=>[
+			    "variables"=>[
 				    "count"=>150
 			    ]
 		    ]

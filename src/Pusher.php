@@ -40,11 +40,11 @@ class Pusher
     }
     
     public function addToken($token,$user_id,$timezone,$language){
-        return $this->request("/api/token",["token"=>$token, "user_id"=>$user_id, "timezone"=>$timezone, "language"=>$language]);
+        return $this->request("/api/token",["token"=>$token, "user_id"=>(string)$user_id, "timezone"=>$timezone, "language"=>$language]);
     }
     
     public function sendMessage($code,$user_id,$params){
-        return $this->request("/api/push/message",["code"=>$code, "user_id"=>$user_id, "params"=>$params]);
+        return $this->request("/api/push/message",["code"=>$code, "user_id"=>(string)$user_id, "params"=>$params]);
     }
     
     public function sendMessages($code,$users){

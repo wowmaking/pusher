@@ -56,6 +56,6 @@ class Pusher
     }
     
     public function removeUser($user_id){
-        return $this->request("/api/token/user",["user_id"=>$user_id], "DELETE");
+        return $this->request("/api/token/user",["user_id"=>(string)$user_id], "DELETE");
     }
 }

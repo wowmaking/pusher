@@ -38,14 +38,13 @@ Send message:
     //send push message
     $params = [
 	    "notification"=>[
-		    "sound"=>"default"
-		    //see other fields for "notification" parameter on https://firebase.google.com/docs/cloud-messaging/admin/send-messages
+		    //see other fields for "notification" parameter on https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#Notification
 	    ],
 	    "variables"=>[
 		    "count"=>100
 	    ],
 	    "additional_params"=>[
-		    //can be additional params: topic, condition ... (https://firebase.google.com/docs/cloud-messaging/admin/send-messages)
+		    //can be additional params: topic, condition ... (https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages)
 	    ]
     ];
     $push->sendMessage("code.message.cat","user_id_1",$params);

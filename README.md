@@ -37,15 +37,15 @@ Send message:
     
     //send push message
     $params = [
-	    "notification"=>[
-		    //see other fields for "notification" parameter on https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#Notification
-	    ],
-	    "variables"=>[
-		    "count"=>100
-	    ],
-	    "additional_params"=>[
-		    //can be additional params: topic, condition ... (https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages)
-	    ]
+        "notification"=>[
+            //see other fields for "notification" parameter on https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#Notification
+        ],
+        "variables"=>[
+            "count"=>100
+        ],
+        "additional_params"=>[
+            //can be additional params: topic, condition ... (https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages)
+        ]
     ];
     $push->sendMessage("code.message.cat","user_id_1",$params);
 
@@ -53,22 +53,22 @@ Send message to users:
     
     //send push messages to users
     $users = [
-	    [
-		    "user_id"=>"user_id_1",
-		    "params"=>[
-			    "variables"=>[
-				    "count"=>200
-			    ]
-		    ]
-	    ],
-	    [
-		    "user_id"=>"user_id_2",
-		    "params"=>[
-			    "variables"=>[
-				    "count"=>150
-			    ]
-		    ]
-	    ]
+        [
+            "user_id"=>"user_id_1",
+            "params"=>[
+                "variables"=>[
+                    "count"=>200
+                ]
+            ]
+        ],
+        [
+            "user_id"=>"user_id_2",
+            "params"=>[
+                "variables"=>[
+                    "count"=>150
+                ]
+            ]
+        ]
     ];
     $push->sendMessages("code.message.cat",$users);
     

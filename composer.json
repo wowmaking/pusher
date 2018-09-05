@@ -3,7 +3,6 @@
     "keywords": ["pusher"],
     "description": "",
     "homepage": "https://github.com/wowmaking/pusher",
-    "minimum-stability": "stable",
     "type": "phplib",
     "license": "MIT",
     "autoload": {
@@ -17,5 +16,11 @@
     ],
     "require": {
         "php": ">=7.1.0"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
     }
 }
